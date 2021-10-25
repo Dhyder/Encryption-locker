@@ -81,6 +81,35 @@ class TestAttributes(unittest.TestCase):
         self.contemporary_attribute.terminate_attributes()
         self.assertEqual(len(Attributes.attributes_list), 1)
 
+    def test_locate_attribute(self):
+        """
+        Tests if location of a certain attribute entry by account name and display the details of the attribute is
+        plausible
+        """
+        self.contemporary_attribute.save_specifics()
+        test_attribute = Attributes("Free_City", "Jodie_Comer", "Villanelle@*Oxana!")
+        test_attribute.save_specifics()
+
+        this_attribute = Attributes.locate_attribute("Free_City")
+
+        self.assertEqual(this_attribute.account, test_attribute.account)
+
+    def test_attribute_exists(self):
+        """
+        Tests if we can return a boolean value based on whether we can or can't locate the attribute.
+        """
+        self.contemporary_attribute.save_specifics()
+        this_attribute = Attributes("Free_City", "Jodie_Comer", "Villanelle@*Oxana!")
+        this_attribute.save_specifics()
+        attribute_located = Attributes.if_attribute("Free_City")
+        self.assertTrue(attribute_located)
+
+    def test_exhibit_saved_attributes(self):
+        """
+        Exhibits all attributes saved by the user
+        """
+        self.assertEqual(Attributes.exhibit_attributes(), Attributes.attributes_list)
+
 
 if __name__ == '__main__':
     unittest.main()
