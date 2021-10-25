@@ -31,3 +31,21 @@ class User:
         This method deletes a saved account from the list
         """
         User.user_list.remove(self)
+
+
+class Attributes:
+    """
+    This creates an attributes class to help create new objects of attributes
+    """
+    attributes_list = []
+
+    @classmethod
+    def authenticate_user(cls, username, password):
+        """
+        This method verifies whether a user is created in the user_list or not
+        """
+        our_user = ""
+        for user in User.user_list:
+            if user.username == username and user.password == password:
+                our_user == user.username
+        return our_user
