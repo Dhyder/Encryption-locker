@@ -69,3 +69,4 @@ class Attributes:
         This method deletes an account's Attributes from them attributes_list
         """
         Attributes.attributes_list.remove(self)
+
