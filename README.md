@@ -19,7 +19,7 @@
 ##### Cloning
 - Open your terminal (Ctrl+Alt+T)/ Git Bash(windows)
 - git clone https://github.com/Dhyder/Encryption-Locker.git
-- In the  terminal cd Encryption-Locker
+- In the  terminal cd Encryption-locker
 - Open the folder in your text editor(Sublime, VScode, Atom, PyCharm)
 ##### Running your project
 * Open the cloned project folder in your terminal.
