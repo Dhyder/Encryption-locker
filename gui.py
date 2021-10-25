@@ -114,7 +114,7 @@ def copy_password(account):
 
 def cipher():
     print(
-        "Hi There, I'm Cipher, your Encryption Locker...\n Please enter one of the following to proceed.\n CA "
+        "Hi There, I'm Cipher, your Encryption Locking Manager...\n Please enter one of the following to proceed.\n CA "
         "--- "
         "(To Create Account)  \n LA ---  (Login To An Existing Account)  \n")
     short_code = input("").lower().strip()
