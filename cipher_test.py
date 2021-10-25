@@ -48,6 +48,39 @@ class TestAttributes(unittest.TestCase):
         self.assertEqual(self.contemporary_attribute.username, "Vickie_Shiraa")
         self.assertEqual(self.contemporary_attribute.password, "Jessica*@hyde7502!")
 
+    def test_stockpile_attribute(self):
+        """
+        Test case to test if attribute is saved into the attributes list.
+        """
+        self.contemporary_attribute.save_specifics()
+        self.assertEqual(len(Attributes.attributes_list), 1)
+
+    def tearDown(self):
+        """
+        This method cleans up after each test case has run.
+        """
+        Attributes.attributes_list = []
+
+    def test_multiple_accounts_save(self):
+        """
+        Tests if we can save multiple Attributes objects to our attributes list
+        """
+        self.contemporary_attribute.save_specifics()
+        test_attribute = Attributes("Free_City", "Jodie_Comer", "Villanelle@*Oxana!")
+        test_attribute.save_specifics()
+        self.assertEqual(len(Attributes.attributes_list), 2)
+
+    def test_terminate_attribute(self):
+        """
+        Tests if we can remove an account's attributes from our Attributes list
+        """
+        self.contemporary_attribute.save_specifics()
+        test_attribute = Attributes("Free_City", "Jodie_Comer", "Villanelle@*Oxana!")
+        test_attribute.save_specifics()
+
+        self.contemporary_attribute.terminate_attributes()
+        self.assertEqual(len(Attributes.attributes_list), 1)
+
 
 if __name__ == '__main__':
     unittest.main()
