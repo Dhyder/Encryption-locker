@@ -27,7 +27,7 @@
 ###### $chmod +x gui.py
 ###### $./gui.py
 - Alternative for windows         
-###### $python gui.py (windows gitbash)
+###### $python gui.py
 ## Technologies Used
 * python3.9.2
 ## Known Bugs
