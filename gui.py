@@ -66,4 +66,23 @@ def save_attributes(attributes):
     attributes.save_specifics()
 
 
-    
+def display_accounts_details():
+    """
+    Function that returns all the saved credential.
+    """
+    return Attributes.exhibit_attributes()
+
+
+def delete_attribute(attributes):
+    """
+    Function to delete a Credentials from credentials list
+
+    """
+    attributes.terminate_attributes()
+
+
+def locate_attribute(account):
+    """
+    Function that finds a Credentials by an account name and returns the Credentials that belong to that account
+    """
+    return Attributes.locate_attribute(account)
