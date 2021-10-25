@@ -95,3 +95,17 @@ class Attributes:
                 return True
         return False
 
+    @classmethod
+    def exhibit_attributes(cls):
+        """
+        This method returns all items in the attributes list
+        """
+        return cls.attributes_list
+
+    def engender_password(self=9):
+        """
+        This produces a random password string of letters and digits and special characters
+        :return: Random password
+        """
+        password = string.ascii_uppercase + string.ascii_lowercase + string.digits + "=_!@#$^&*~%?"
+        return "".join(random.choice(password) for _ in range(self))
