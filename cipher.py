@@ -70,3 +70,28 @@ class Attributes:
         """
         Attributes.attributes_list.remove(self)
 
+    @classmethod
+    def locate_attribute(cls, account):
+        """
+        This method takes in an account's name and returns a attribute that matches that account's name
+        """
+        for attribute in cls.attributes_list:
+            if attribute.account == account:
+                return attribute
+
+    @classmethod
+    def duplicate_password(cls, account):
+        located_attributes = Attributes.locate_attribute(account)
+        pyperclip.copy(located_attributes.password)
+
+    @classmethod
+    def if_attribute(cls, account):
+        """
+        This checks an attributes existence from the attributes list and returns true or false.
+        :return: True or False
+        """
+        for attribute in cls.attributes_list:
+            if attribute.account == account:
+                return True
+        return False
+
