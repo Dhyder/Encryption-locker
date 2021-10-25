@@ -2,7 +2,7 @@
 ## Author
 * [Dhyder](https://github.com/Dhyder)
 ## Description 
-* Encryption locker is a password management application.
+* **Cipher** is a python application that manages login and signup credentials of a person's accounts. It can also store their passwords and even generate a unique password for them in the event they don't want to on their own.
 ## Screenshot
 ![cipher](https://user-images.githubusercontent.com/86789832/138736556-d7c1e138-a3db-47fe-a372-b1d69b167b19.jpg)
 ## User Stories
