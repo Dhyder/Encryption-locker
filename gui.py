@@ -86,3 +86,27 @@ def locate_attribute(account):
     Function that finds a Credentials by an account name and returns the Credentials that belong to that account
     """
     return Attributes.locate_attribute(account)
+
+
+def check_attributes(account):
+    """
+    Function that check if a Credentials exists with that account name and return true or false
+
+    """
+    return Attributes.if_attribute(account)
+
+
+def engender_password():
+    """
+    generates a random password for the user.
+    """
+    auto_password = Attributes.engender_password()
+    return auto_password
+
+
+def copy_password(account):
+    """
+    A function that copies the password using the pyperclip framework
+    We import the framework then declare a function that copies the emails.
+    """
+    return Attributes.duplicate_password(account)
