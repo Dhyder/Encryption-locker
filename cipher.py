@@ -49,3 +49,23 @@ class Attributes:
             if user.username == username and user.password == password:
                 our_user == user.username
         return our_user
+
+    def __init__(self, account, username, password):
+        """
+        Defines attributes to be stored
+        """
+        self.account = account
+        self.username = username
+        self.password = password
+
+    def save_specifics(self):
+        """
+        Stores a new attribute to the attributes list
+        """
+        Attributes.attributes_list.append(self)
+
+    def terminate_attributes(self):
+        """
+        This method deletes an account's Attributes from them attributes_list
+        """
+        Attributes.attributes_list.remove(self)
